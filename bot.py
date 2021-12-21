@@ -13,7 +13,7 @@ with open("links.md", "r") as file:
 with open("materials.md", "r") as file:
     materialsfile = file.read()
 
-bot = commands.Bot(command_prefix=".")
+bot = commands.Bot(command_prefix="-")
 
 
 @bot.event
