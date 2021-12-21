@@ -51,7 +51,6 @@ async def help(ctx):
 
     fields: dict[str, str] = {
         ".help": "Print this help message",
-        ".class": "Print out the next class",
         ".verify @member": "Verify a member(Only for admin)",
         ".links [materials | social]": "Print the important links",
         ".timetable": "Print out the timetable",
