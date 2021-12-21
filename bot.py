@@ -86,7 +86,7 @@ async def links(ctx, args=None):
 
 @bot.command()
 async def timetable(ctx):
-    await ctx.reply("https://ibb.co/0KYKtbg")
+    await ctx.reply("https://ibb.co/XWptZ1k")
 
 
 @verify.error
