@@ -13,6 +13,11 @@ with open("links.md", "r") as file:
 with open("materials.md", "r") as file:
     materialsfile = file.read()
 
+with open("labs.md", "r") as file:
+    labsfile = file.read()
+
+
+
 bot = commands.Bot(command_prefix="-")
 
 
@@ -52,7 +57,7 @@ async def help(ctx):
     fields: dict[str, str] = {
         ".help": "Print this help message",
         ".verify @member": "Verify a member(Only for admin)",
-        ".links [materials | social]": "Print the important links",
+        ".links [materials | social | labs]": "Print the important links",
         ".timetable": "Print out the timetable",
     }
 
@@ -76,11 +81,15 @@ async def links(ctx, args=None):
             embed.description = linksfile
             await ctx.reply(embed=embed)
             return
+        elif args == "labs":
+            embed.description = labsfile
+            await ctx.reply(embed=embed)
+            return
         else:
             await ctx.reply("**No such link headers**")
             return
 
-    embed.description = linksfile + materialsfile
+    embed.description = linksfile + materialsfile + labsfile
     await ctx.reply(embed=embed)
 
 
