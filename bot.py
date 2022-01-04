@@ -23,6 +23,7 @@ bot = commands.Bot(command_prefix="-")
 
 @bot.event
 async def on_ready():
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name = "-help"))
     print(f"Bot online in {len(bot.guilds)} server")
 
 
