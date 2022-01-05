@@ -51,15 +51,15 @@ bot.remove_command("help")
 async def help(ctx):
     embed = discord.Embed(
         title="Help message",
-        description=""""Command prefix is `.` (dot). `[ param1 | param2 ]` means pass any optional parameter(**param1** or **param2**)""",
+        description=""""Command prefix is `-` (dash). `[ param1 | param2 ]` means pass any optional parameter(**param1** or **param2**)""",
         color=discord.Color.green(),
     )
 
     fields: dict[str, str] = {
-        ".help": "Print this help message",
-        ".verify @member": "Verify a member(Only for admin)",
-        ".links [materials | social | labs]": "Print the important links",
-        ".timetable": "Print out the timetable",
+        "-help": "Print this help message",
+        "-verify @member": "Verify a member(Only for admin)",
+        "-links [materials | social | labs]": "Print the important links",
+        "-timetable": "Print out the timetable",
     }
 
     for _name, _value in fields.items():
